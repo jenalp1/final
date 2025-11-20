@@ -1,0 +1,9 @@
+@media (max-width: 120em) {
+    nav .burger {
+        display: inline-block;
+        cursor: pointer;
+        bottom: -1000em;
+        margin: 0;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
