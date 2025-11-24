@@ -15,6 +15,9 @@ p{
     font-style: normal;
 }
 
+h1{
+    font-size:3.1rem;
+}
 h2,h3{
     font-family: "Alegreya Sans", sans-serif;
     font-weight:bold;
@@ -39,12 +42,13 @@ h2,h3{
 .grid-container{
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 1fr 1fr auto auto auto;
+    grid-template-rows: 1fr 1fr auto auto auto auto;
     grid-template-areas:
     "welcome-section"
     "info"
     "holiday"
     "menu-button"
+    "review-title"
     "testimonials";
 }
 .coffeeshop-img{
@@ -85,7 +89,6 @@ h2,h3{
     display:grid;
     grid-template-columns:1fr;
     grid-template-rows:1fr auto 1fr auto 1fr auto;
-    flex-direction:column;
     grid-template-areas: 
     "drink-one"
     "coffee1"
@@ -137,10 +140,11 @@ h2,h3{
     margin-top:20px;
 }
 
+/* css for the holiday drinks */
 .drink-one{
     background-image:url("../img/latte.jpg");
-    width:32%;
-    max-width:32%;
+    width:41%;
+    max-width:41%;
     height:130px;
     border-radius:50%;
     background-size:cover;
@@ -148,7 +152,6 @@ h2,h3{
     border:#E9E2D9 solid;
     justify-self:center;
     padding:0;
-    flex-direction:column;
     gap:10px;
     grid-area:drink-one;
 
@@ -156,8 +159,7 @@ h2,h3{
 
 .drink-two{
     background-image:url("../img/latte.jpg");
-    width:32%;
-    max-width:32%;
+    width:41%;
     height:130px;
     border-radius:50%;
     background-size:cover;
@@ -165,15 +167,13 @@ h2,h3{
     border:#E9E2D9 solid;
     justify-self:center;
     padding:0;
-    flex-direction:column;
     grid-area:drink-two;
 
 }
 
 .drink-three{
     background-image:url("../img/latte.jpg");
-    width:32%;
-    max-width:32%;
+    width:41%;
     height:130px;
     border-radius:50%;
     background-size:cover;
@@ -181,7 +181,6 @@ h2,h3{
     border:#E9E2D9 solid;
     justify-self:center;
     padding:0;
-    flex-direction:column;
     grid-area:drink-three;
 
 }
@@ -214,19 +213,27 @@ h2{
     grid-area: holiday;
 }
 
+.menu-button{
+    text-align:center;
+    margin-bottom:50px;
+}
 .testimonials{
     grid-area:testimonials;
     /* css for the review cards  */
     display:grid;
     grid-template-columns:1fr; 
     grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas:
+    "card1"
+    "card2"
+    "card3";
 }
 
-.menu-button{
-    text-align:center;
+.review-title{
+    grid-area:review-title;
+    display:grid;
+    justify-content:center;
 }
-
-/* css for the review cards  */
 
 .card-1{
     display: flex;
@@ -238,12 +245,50 @@ h2{
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height:250px;
+    grid-area:card1;
+}
+.card-2{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height:250px;
+    grid-area:card2;
 }
 
+.card-3{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height:250px;
+    grid-area:card3;
+}
 
+.username{
+    font-size:18px;
+}
+.review-text{
+    font-size:14px;
+}
+
+.review-date{
+    font-size:12px;
+}
 @media screen and (min-width: 768px) {
 
-
+.welcome-message{
+    width:100%;
+    text-align:left;
+}
 .holiday-specials{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -251,6 +296,38 @@ h2{
     grid-template-areas:
     "drink-one drink-two drink-three"
     "coffee1 coffee2 coffee3";
+}
+
+.testimonials{
+    grid-area:testimonials;
+    /* css for the review cards  */
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas:
+    "card1 card2 card3";
+}
+
+.drink-one{
+width:41%;
+height:10x;
+}
+.drink-two{
+width:41%;
+height:10x;
+}
+
+.drink-three{
+width:41%;
+height:10x;
+}
+
+#learn-more{
+    width:30%;
+}
+
+#full-menu{
+    width:30%;
 }
 
 }
