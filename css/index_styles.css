@@ -52,7 +52,8 @@ h2,h3{
     padding:6px 20px 6px 20px;
     border:solid #D9C3B2;
     border-radius: 10px;
-    width:210px;
+    width:72%;
+    max-width:72%;
     background-image:none;
 }
 
