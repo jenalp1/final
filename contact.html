@@ -4,32 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <!-- picnic css framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <link rel ="stylesheet" href="css/primary_styles.css">
-    <link rel ="stylesheet" href="css/contact_styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel ="primary stylesheet" href ="css/primary_styles.css">
+    <!-- stylesheet -->
+    <link href="css/contact_styles.css" rel="stylesheet">
 </head>
 <body>
+    <header>
     
-<header>
-    <nav class="nav">
-        <a href="#" class="brand"> 
-            <img class="logo" src="img/logo.png" alt="picture of the coffee shop logo"></a>
+    </header>
 
-        <input id="bmenub" type="checkbox" class="show">
+    <main>
+        <section class="contact-header">
+            <div class="contact-header-text">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
 
-        <label for="bmenub" class="burger">&#9776;</label>
+            <p class ="additional_message">We would love to hear from you! Send us a message and we'll get back to you as soon as possible.</p>
 
-    <div class="menu">
+    
+        <form method ="POST" action ="#" class="contact-form" action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-        <label for="bmenub" class="close">&times;</label>
+                <label for ="phone_number">Phone Number:</label>
+                <input type ="tel" id="phone_number" placeholder ="123-456-7890" required>
 
-        <a href="#welcome" class="button">Home</a>
-        <a href="#gallery" class="button">Menu</a>
-        <a href="#signup" class="button">About</a>
-        <a href="contact" class="button">Contact</a>
-    </div>
-    </nav>
-</header>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
 
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="We love to hear your concerns, suggestions, and feedback!" required></textarea>
+
+                <button type="submit">Send Message</button>
+        </form>
+    </main>
 </body>
 </html>
