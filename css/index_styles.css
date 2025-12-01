@@ -15,7 +15,7 @@ p{
     font-style: normal;
 }
 
-h1{
+/* h1{
     font-size:3.1rem;
 }
 h2,h3{
@@ -25,7 +25,7 @@ h2,h3{
     text-decoration:underline;
     padding:0;
     font-size:25px;
-}
+} */
 
 
 .welcome-section{
@@ -36,7 +36,7 @@ h2,h3{
     font-variation-settings:
     "wdth" 100;
     text-align:center;
-    background: linear-gradient(to top,#E9E2D9, #E9E2D9, #C8B59E);
+    /* background: linear-gradient(to top,#E9E2D9, #E9E2D9, #C8B59E); */
     width:100%;
     grid-area:welcome-section;
 }
