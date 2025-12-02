@@ -25,6 +25,24 @@
    
 }
 
+
+.wiki_link{
+    background-color: #e9e2d9;
+    color: #7a5e51;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px
+
+}
+
+.wiki_link:hover, .wiki_link:focus{
+    background-color: #7a5e51;
+    color: #e9e2d9;
+    outline: 2px solid #e9e2d9;
+    text-decoration: underline;
+}
+
 .gallery {
     text-align: center;
 }
