@@ -84,7 +84,7 @@
     padding-left: 20px;
 }
 
-.button{
+.learn_button{
     background-color: #e9e2d9;
     color: #7a5e51;
     width: 60%;
@@ -92,7 +92,7 @@
     border-radius: 5px;
 }
 
-.button:hover, .button:focus{
+.learn_button:hover, .learn_button:focus{
     background-color: #7a5e51;
     color: #e9e2d9;
     outline: 2px solid #e9e2d9;
