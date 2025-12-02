@@ -287,6 +287,10 @@ h2{
 .review-date{
     font-size:12px;
 }
+
+.review-details{
+    height:225px;
+}
 @media screen and (min-width: 768px) {
 
 .welcome-message{
