@@ -45,25 +45,27 @@
         </section>
 
             <p class ="additional_message">We would love to hear from you! Send us a message and we'll get back to you as soon as possible.</p>
+        
 
-    
-        <form method ="POST" action ="#" class="contact-form">
+            <form class="contact-form" id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                <input type="text" id="name" name="name" placeholder="John Doe" required/>
 
                 <label for ="phone_number">Phone Number:</label>
-                <input type ="tel" id="phone_number" placeholder ="123-456-7890" required>
+                <input type ="tel" id="phone_number" name ="phone_number" placeholder ="123-456-7890" required/>
 
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required/>
 
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+                <input type="text" id="subject" name="subject" placeholder="Message subject" required/>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" placeholder="We love to hear your concerns, suggestions, and feedback!" required></textarea>
 
                 <button type="submit">Send Message</button>
+                <p id="form-status"></p>
+
         </form>
     </main>
 
@@ -86,6 +88,40 @@
             </div>
         </div>
     </footer>
+
+<script>
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", (e) => {
+// 1. STOP the default browser behavior
+e.preventDefault();
+
+status.innerText = "Sending your message...";
+
+const data = new FormData(form);
+
+// Your Google Script URL
+const action = "https://script.google.com/macros/s/AKfycbzhcjek88zqSMQzbRK2icetRpkgpB54PfjO5DgmLEqLGlbR4WeJ1CEwNSipWu6Sk9Ci/exec";
+
+// 2. The Fetch Request with 'no-cors'
+fetch(action, {
+method: "POST",
+body: data,
+mode: "no-cors", // <--- THIS IS CRITICAL FOR GOOGLE SHEETS
+})
+.then(() => {
+// With 'no-cors', we can't read the server response,
+// so we assume success if no error was thrown.
+status.innerText = "Message sent successfully!";
+form.reset();
+})
+.catch((error) => {
+status.innerText = "Oops! There was a problem.";
+console.error("Error:", error);
+});
+});
+</script>
 
 </body>
 </html>
