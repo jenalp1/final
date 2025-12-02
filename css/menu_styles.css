@@ -30,12 +30,14 @@
     border: 1px solid #7a5e51;
     display: flex;
     flex-direction: column;
-    flex: 1 1; 
+    flex: 1 1;
     margin: 20px;
     transition: transform 0.3s ease;
 }
 .holiday-card{
     border: 5px dashed #7a5e51 ;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card:hover{
@@ -47,7 +49,7 @@
     text-align: center;
     border-bottom: 2px solid #e0d4c3;
     padding-bottom: 10px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-family: "Merriweather", serif;
 }
 
@@ -57,8 +59,17 @@
     align-items: flex-start; 
     flex-wrap: wrap;
     padding: 5px;
+    text-align: left;
 }
 
+.item-special{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: nowrap;
+    padding: 5px;
+    text-align: left;    
+}
 .item-name {
     font-weight: bold;
 }
@@ -78,6 +89,7 @@
     color: #7a5e51;
     width: 60%;
     align-self: center;
+    border-radius: 5px;
 }
 
 .button:hover, .button:focus{
@@ -98,11 +110,14 @@
         margin-right: 30px;
         margin-bottom: 30px;
         font-size: 1.5rem;
+        align-items: stretch;
     }
 
     .card, .holiday-card {
         width: auto;
-        height: 95%;
-    }
+        height: auto;
+        display: flex;
+        flex-direction: column
+    } 
 }
 
